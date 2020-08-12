@@ -55,7 +55,7 @@
 
                         if (in_array($file_ext, $allowed_ext) === true) {
                             if ($file_size < 1044070) {
-                                $lokasi = 'C:/xampp/htdocs/ProjectTB/upload/' . $nama . '.' . $file_ext;
+                                $lokasi = 'C:/xampp/htdocs/Website/upload/' . $nama . '.' . $file_ext;
                                 move_uploaded_file($file_tmp, $lokasi);
                                 $sql = ("INSERT INTO t_file_upload VALUES(NULL, '$tgl', '$nama', '$file_ext', '$file_size', '$lokasi')");
                                 $simpan = mysqli_query($koneksi, $sql) or     die("Proses Tambah data GAGAL! <br> ");
