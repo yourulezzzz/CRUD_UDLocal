@@ -43,7 +43,6 @@
                 <h2> Input Barang Masuk </h2>
                 <table>
 
-
                     <?php
 
                     //CONNECTION DATABASE
@@ -67,7 +66,7 @@
                                 $simpan = mysqli_query($koneksi, $sql) or die("Proses Tambah data Pelanggan GAGAL! <br> ");
                                 if ($simpan && isset($_GET['aksi'])) {
                                     if ($_GET['aksi'] == 'create') {
-                                        header('Location: transaksi.php');
+                                        header('Location: insertdata.php');
                                     }
                                 }
                             } else {
@@ -102,12 +101,12 @@
                                     </tr>
                                     <tr>
                                         <td> Jumlah Barang </td>
-                                        <td><input type="text" name="stock" required maxlength="11" pattern=[1-9]></td>
+                                        <td><input type="text" name="stock" required maxlength="11" pattern=[1-10000]></td>
                                     </tr>
                                     </tr>
                                     <tr>
                                         <td> Ukuran Barang </td>
-                                        <td><input type="text" name="ukuran" required maxlength="11" pattern=[1-9]></td>
+                                        <td><input type="text" name="ukuran" required maxlength="11"></td>
                                     </tr>
                                     </tr>
                                     <tr>

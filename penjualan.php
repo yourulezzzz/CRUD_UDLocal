@@ -65,7 +65,7 @@
                                 $simpan = mysqli_query($koneksi, $sql) or die("Proses Tambah data GAGAL! <br> ");
                                 if ($simpan && isset($_GET['aksi'])) {
                                     if ($_GET['aksi'] == 'create') {
-                                        header('Location: transaksi.php');
+                                        header('Location: penjualan.php');
                                     }
                                 }
                             } else {
